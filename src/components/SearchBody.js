@@ -6,13 +6,14 @@ import {
   IoChevronForward,
   IoRemoveCircleSharp,
 } from "react-icons/io5";
+import SearchIllustration from "../assets/images/search.png";
 
 const SearchBody = ({
   isLoading,
   setIsLoading,
   existingBooks,
   handleBookshelf,
-  handleTabClick
+  handleTabClick,
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -60,7 +61,10 @@ const SearchBody = ({
 
         <div className="w-[2px] h-[2.5rem] bg-purple-lighter"></div>
 
-        <button className="self-end w-fit text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-1 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover" onClick={() => handleTabClick("bookshelf")}>
+        <button
+          className="self-end w-fit text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-1 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"
+          onClick={() => handleTabClick("bookshelf")}
+        >
           <IoChevronForward className="w-4 h-4" />
           <p className="font-bold">Bookshelf</p>
         </button>
@@ -73,9 +77,14 @@ const SearchBody = ({
       ) : (
         <div className="grid gap-6 lg:grid-cols-2 2xl:grid-cols-3">
           {searchResults.length === 0 ? (
-            <div>
-              <p className="font-medium md:text-lg">
-                No search results found. 😔
+            <div className="flex flex-col items-center justify-center gap-4 lg:col-span-2 2xl:col-span-3">
+              <img
+                src={SearchIllustration}
+                alt=""
+                className="w-[70vw] max-w-[300px]"
+              />
+              <p className="font-medium md-2:text-lg">
+                No search results found.
               </p>
             </div>
           ) : (
