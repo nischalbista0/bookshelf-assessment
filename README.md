@@ -15,11 +15,13 @@ Before you begin, ensure you have met the following requirements:
 
    ```git clone https://github.com/nischalbista0/bookshelf-assessment```
 
-2. Install project dependencies using npm:
+2. Navigate to the project directory using your preferred terminal (e.g., Git Bash or CMD):
+
+3. Install project dependencies using npm:
    
     ```npm install```
 
-3. Now that you've set up the project, you can run the React application locally:
+4. Now that you've set up the project, you can run the React application locally:
    
     ```npm start```
 
