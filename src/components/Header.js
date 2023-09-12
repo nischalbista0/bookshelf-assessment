@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BsFillSunFill, BsMoonFill } from "react-icons/bs";
-import { IoAddCircleSharp } from "react-icons/io5";
 
 const Header = (props) => {
   const [theme, setTheme] = useState("light");
@@ -10,10 +9,6 @@ const Header = (props) => {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark");
-  };
-
-  const handleAddBookClick = () => {
-    props.openModal();
   };
 
   return (
